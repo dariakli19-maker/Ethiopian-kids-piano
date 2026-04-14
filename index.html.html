@@ -334,7 +334,7 @@ async function parseSong(name){
   try{
     const res=await fetch('https://api.anthropic.com/v1/messages',{
       method:'POST',
-      headers:{'Content-Type':'application/json','anthropic-version':'2023-06-01','x-api-key':'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'},
+      headers:{'Content-Type':'application/json','anthropic-version':'2023-06-01','x-api-key':'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'},
       body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,messages:[{role:'user',content:`Create Ethiopian children's melody for: "${name}". Use ONLY: ዶ,ሬ,ሚ,ላ,ሲ,ዶ2,ሬ2,ሚ2. Respond ONLY JSON: {"title":"...","notes":[{"note":"ዶ","duration":0.5,"time":0},...]} 25-35 notes.`}]})
     });
     const data=await res.json();
